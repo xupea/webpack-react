@@ -8,6 +8,9 @@ var baseConfig = require('./webpack.config.base.js')
 module.exports = _.extend(baseConfig, {
 	// The entry point for the bundle
 	entry: [
+		// React Hot Replace
+		// 'webpack-dev-server/client?http://localhost:8000',
+		// 'webpack/hot/only-dev-server',
 		'./app/index.js'
 	],
 	output: {
