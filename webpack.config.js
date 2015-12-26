@@ -20,11 +20,21 @@ module.exports = _.extend(baseConfig, {
 		libraryTarget: 'amd',
 		// The output directory as absolute path (required)
 		path: path.resolve(__dirname, 'dist'),
+		// This is for React hot 
+		// path: path.join(__dirname, 'dist'),
+		// filename: 'bundle.js',
+		// publicPath: '/static/'
 		// The filename of the entry chunk as relative path inside the output.path directory
 		filename: 'webpack-react.js'
 	}//,
 	// Add additional plugins to the compiler
-	//plugins: [],
+	plugins: [
+		// Webpack can find these files and deduplicate them
+		new webpack.optimize.DedupePlugin(),
+		new webpack.DefinePlugin(
+		
+		)
+	],
 	// Specify dependencies that shouldn’t be resolved by webpack
 	//externals: {}
 })
