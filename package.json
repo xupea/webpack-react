@@ -1,0 +1,40 @@
+{
+  "name": "webpack-react",
+  "version": "1.0.0",
+  "description": "webpack with react",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/webpack --progress --colors --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterHsu2013/webpack-react.git"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "Peter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterHsu2013/webpack-react/issues"
+  },
+  "homepage": "https://github.com/PeterHsu2013/webpack-react#readme",
+  "dependencies": {
+    "immutable": "^3.7.6",
+    "lodash": "^3.10.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-hot-loader": "^1.3.0",
+    "react-redux": "^4.0.5",
+    "redux": "^3.0.5",
+    "redux-logger": "^2.3.1",
+    "redux-thunk": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "webpack": "^1.12.9"
+  }
+}
