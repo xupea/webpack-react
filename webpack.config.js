@@ -26,16 +26,16 @@ module.exports = _.extend(baseConfig, {
 		// publicPath: '/static/'
 		// The filename of the entry chunk as relative path inside the output.path directory
 		filename: 'webpack-react.js'
-	}//,
+	},
 	// Add additional plugins to the compiler
 	plugins: [
 		// Webpack can find these files and deduplicate them
 		new webpack.optimize.DedupePlugin(),
 		// Invoke them in code
-		new webpack.DefinePlugin(
+		new webpack.DefinePlugin({
 			__DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
 			__PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'true'))
-		)
+		})
 	],
 	// Specify dependencies that shouldn’t be resolved by webpack
 	//externals: {}

@@ -27,8 +27,9 @@ module.exports = {
 				test: /\.js/,
 				// A condition that must not be met
 				exclude: /(node_modules|\.json)/,
+				loader: 'babel-loader'
 				// A array of loaders as string
-				loaders: ['react-hot-loader', 'babel-loader?cacheDirectory']
+				// loaders: ['react-hot', 'babel']
 			}
 		]
 	}
