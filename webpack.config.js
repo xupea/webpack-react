@@ -31,8 +31,10 @@ module.exports = _.extend(baseConfig, {
 	plugins: [
 		// Webpack can find these files and deduplicate them
 		new webpack.optimize.DedupePlugin(),
+		// Invoke them in code
 		new webpack.DefinePlugin(
-		
+			__DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
+			__PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'true'))
 		)
 	],
 	// Specify dependencies that shouldn’t be resolved by webpack
